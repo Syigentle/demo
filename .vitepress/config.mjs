@@ -11,7 +11,7 @@ export default defineConfig({
             "link",
             {
                 rel: "icon",
-                href: "/logo.svg",
+                href: "/demo/logo.svg",
             },
         ],
     ],
