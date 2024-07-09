@@ -2,6 +2,7 @@ import { defineConfig } from "vitepress"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+    base: "/demo/",
     title: "Syigenle文档",
     description: "A VitePress Site", // SEO用到的，无需太关注
     // 网页图标
@@ -16,7 +17,7 @@ export default defineConfig({
     ],
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
-        logo: "/logo.svg", // 左上角的logo
+        logo: "/demo/logo.svg", // 左上角的logo
         nav: [
             { text: "主页", link: "/" },
             {
