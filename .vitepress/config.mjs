@@ -1,4 +1,7 @@
 import { defineConfig } from "vitepress"
+import nav from "./nav"
+import sidebar from "./siderbar"
+
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -18,34 +21,26 @@ export default defineConfig({
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         logo: "/demo/logo.svg", // 左上角的logo
-        nav: [
-            { text: "主页", link: "/" },
-            {
-                text: "下拉框",
-                items: [
-                    { text: "示例", link: "/markdown-examples" },
-                    { text: "Api", link: "/api-examples" },
-                ],
-            },
-        ],
-
-        sidebar: [
-            {
-                text: "Examples",
-                items: [
-                    { text: "Markdown Examples", link: "/markdown-examples" },
-                    { text: "Runtime API Examples", link: "/api-examples" },
-                ],
-            },
-            {
-                text: "Examples2",
-                items: [
-                    { text: "Markdown Examples", link: "/markdown-examples" },
-                    { text: "Runtime API Examples", link: "/api-examples" },
-                ],
-            },
-        ],
-
+        outlineTitle: "目录",
+        outline: [2, 4],
+        nav,
+        // sidebar: [
+        //     {
+        //         text: "Examples",
+        //         items: [
+        //             { text: "Markdown Examples", link: "/markdown-examples" },
+        //             { text: "Runtime API Examples", link: "/api-examples" },
+        //         ],
+        //     },
+        //     {
+        //         text: "Examples2",
+        //         items: [
+        //             { text: "Markdown Examples", link: "/markdown-examples" },
+        //             { text: "Runtime API Examples", link: "/api-examples" },
+        //         ],
+        //     },
+        // ],
+        sidebar,
         socialLinks: [
             { icon: "github", link: "https://github.com/Syigentle" },
             { icon: "twitter", link: "https://twitter.com/vuejs" },
